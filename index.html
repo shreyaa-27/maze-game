@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Maze Game</h1>
+
+    <div id="difficulty">
+        <p>Select Difficulty:</p>
+        <button onclick="startGame(20)">Easy</button>
+        <button onclick="startGame(30)">Medium</button>
+        <button onclick="startGame(45)">Hard</button>
+    </div>
+
+    <div id="game-container">
+        <p>Use W/A/S/D or Arrow Keys to move</p>
+        <div id="maze"></div>
+        <p id="status"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

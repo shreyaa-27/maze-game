@@ -1,0 +1,166 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Game Container */
+#game-container {
+    display: none; /* Hidden by default until the game starts */
+}
+
+/* Maze Grid */
+#maze {
+    display: grid;
+    grid-template-columns: repeat(20, 20px); /* Grid layout for maze */
+    gap: 2px; /* Gap between cells */
+    margin: 20px auto;
+    width: fit-content;
+    border: 2px solid #ccc; /* Add border to give it a box-like appearance */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* General Cell Style */
+.cell {
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    border-radius: 4px; /* Slightly rounded corners for cells */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover and movements */
+}
+
+/* Cell Hover Effect */
+.cell:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Wall Cell */
+.wall {
+    background-color: #2f2f2f; /* Darker, more neutral color for walls */
+    color: white;
+    border-radius: 4px;
+}
+
+/* Player Cell */
+.player {
+    background-color: #009688; /* Sleek teal color for the player */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%; /* Circular player for a clean look */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for player */
+}
+
+/* Exit Cell */
+.exit {
+    background-color: #4CAF50; /* Classic green for exit */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Enemy Cell */
+.enemy {
+    background-color: #f44336; /* Bold red for the enemy */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Empty Cell */
+.empty {
+    background-color: #e0e0e0; /* Soft gray for empty spaces */
+}
+
+/* Timer and Game Result */
+#timer {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#game-result {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e53935;
+    margin-top: 30px;
+}
+
+/* Buttons and Controls */
+button {
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for buttons */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #00796b;
+}
+
+/* Difficulty Selection Section */
+#difficulty-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 50px;
+}
+
+#difficulty-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#game-section {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #maze {
+        grid-template-columns: repeat(10, 20px); /* Adjust grid for smaller screens */
+    }
+
+    #game-result {
+        font-size: 18px;
+    }
+
+    #timer {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
